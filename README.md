@@ -21,8 +21,8 @@
 - [🌟・Information](#info)
 * [📁・Setup](#setup)
 - [💎・License](#setup)
-* [🤓・Dear skids](#skids)
-- [📝・Developers](#devs)
+* [📝・Developers](#devs)
+- [🤓・Dear skids](#skids)
 
 ## <a id="info"></a>🌟〢Information
 Terminator V1 is a discord bot capable of DELETING discord servers in an instant.
