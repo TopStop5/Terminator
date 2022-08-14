@@ -30,14 +30,15 @@ Run setup.bat
 
 Watch your bot come to life!
 
+## <a id="license"></a>💎〢License
+GNU General Public License v3.0
+
+## <a id="devs"></a>📝〢Developers
+Clicks // TopStop5
+
 ## <a id="skids"></a>🤓 〢 Dear Skids
 
 We all know you cant code for shit but skidding peoples hard work, is just not it \
 Profiting from it is just even more f\*cked up \
 I hope you end up on the streets begging for spare change
 
-## <a id="license"></a>💎〢License
-GNU General Public License v3.0
-
-## <a id="devs"></a>📝〢Developers
-Clicks // TopStop5
