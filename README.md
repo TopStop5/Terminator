@@ -2,6 +2,12 @@
   Terminator V1☣️
 </h1>
 
+<p align="center"> 
+  <kbd>
+<img src="https://i.imgur.com/7xBo7g4.png">
+  </kbd>
+</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/discord.py-V2.0-brightgreen">
   <img src="https://img.shields.io/github/last-commit/TopStop5/Terminator?style=flat-square">
