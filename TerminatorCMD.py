@@ -72,12 +72,12 @@ while True:
     choice = input(f'{bb}[{w}>{bb}]{w} What would you like to do?: ')
 
     if choice == '1':
-        title1
+        title2
     # Server Leaver
     if choice == '2':
         os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
-        title1 = """
+        title2 = """
 ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗     ██╗     ███████╗ █████╗ ██╗   ██╗███████╗██████╗ 
 ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗    ██║     ██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
 ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝    ██║     █████╗  ███████║██║   ██║█████╗  ██████╔╝
@@ -85,8 +85,8 @@ while True:
 ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║    ███████╗███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
 ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝                                                                                                 
     """
-        faded_title1 = fade.purplepink(title1)
-        print(faded_title1)
+        faded_title2 = fade.purplepink(title2)
+        print(faded_title2)
         ID = input(f'{bb}[{w}>{bb}]{w} Server ID:')
 
         apilink = "https://discord.com/api/v9/users/@me/guilds/" + str(ID)
