@@ -4,7 +4,7 @@
 
 <p align="center"> 
   <kbd>
-<img src="https://i.imgur.com/7xBo7g4.png">
+<img src="https://imgur.com/a/ziQENl7">
   </kbd>
 </p>
 
