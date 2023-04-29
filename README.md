@@ -2,9 +2,9 @@
   Terminator V1☣️
 </h1>
 
-<p align="center">
-<img src = "https://imgur.com/a/ziQENl7" width=700 height=500>
-</p>
+
+<img src = ".\images\terminator.png">
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/discord.py-V2.0-brightgreen">
