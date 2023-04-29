@@ -1,5 +1,5 @@
 <h1 align="center">
-  Terminator V1☣️
+  Terminator V2⚠️
 </h1>
 
 
@@ -23,16 +23,12 @@
 - [🤓・Dear skids](#skids)
 
 ## <a id="info"></a>🌟〢Information
-Terminator V1 is a discord bot capable of DELETING discord servers in an instant.
+Terminator V2 is not complete so check back for updates!
 
 
 
 ## <a id="setup"></a>📁〢 Setup
-Open [config.json](https://github.com/TopStop5/Terminator/blob/main/config.json) and put your Token & Prefix in there
-
-Run setup.bat
-
-Watch your bot come to life!
+Click terminator.exe and it should work
 
 ## <a id="license"></a>💎〢License
 GNU General Public License v3.0
@@ -40,9 +36,5 @@ GNU General Public License v3.0
 ## <a id="devs"></a>📝〢Developers
 Clicks // TopStop5
 
-## <a id="skids"></a>🤓 〢 Dear Skids
 
-We all know you cant code for shit but skidding peoples hard work, is just not it \
-Profiting from it is just even more f\*cked up \
-I hope you end up on the streets begging for spare change
 
