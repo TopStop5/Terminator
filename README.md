@@ -20,7 +20,7 @@
 * [📁・Setup](#setup)
 - [💎・License](#setup)
 * [📝・Developers](#devs)
-- [🤓・Dear skids](#skids)
+
 
 ## <a id="info"></a>🌟〢Information
 Terminator V2 is not complete so check back for updates!
