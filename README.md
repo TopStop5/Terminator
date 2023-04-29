@@ -28,6 +28,8 @@ Terminator V2 is not complete so check back for updates!
 
 
 ## <a id="setup"></a>📁〢 Setup
+open cmd and type`pip install requirements.txt` then close it
+
 Click terminator.exe and it should work
 
 ## <a id="license"></a>💎〢License
