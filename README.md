@@ -33,7 +33,7 @@ open cmd and type`pip install requirements.txt` then close it
 Click terminator.exe and it should work
 
 ## <a id="license"></a>💎〢License
-GNU General Public License v3.0
+MIT Licence
 
 ## <a id="devs"></a>📝〢Developers
 Clicks // TopStop5
