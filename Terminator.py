@@ -1,6 +1,41 @@
 import time, threading, requests, fade, sys, asyncio, os, random, threading, json, websocket
 from colorama import Back, Fore, Style
 from websocket import WebSocket
+try:
+    import requests
+except:
+    os.system("pip install requests")
+    import requests
+try:
+    from requests import get
+except:
+    os.system("pip install requests")
+    from requests import get
+try:
+    import colorama
+except:
+    os.system("pip install colorama")
+    import colorama
+try:
+    import pyautogui
+except:
+    os.system("pip install pyautogui")
+    import pyautogui
+try:
+    import json
+except:
+    os.system('pip install json')
+    import json
+try:
+    import websocket
+except:
+    os.system('pip install websocket')
+    import websocket
+try:
+    import asyncio
+except:
+    os.system('pip install asyncio')
+    import asyncio
 
 w = Fore.WHITE
 b = Fore.BLACK

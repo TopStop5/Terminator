@@ -28,9 +28,11 @@ Terminator V2 is not complete so check back for updates!
 
 
 ## <a id="setup"></a>📁〢 Setup
-open cmd and type `pip install requirements.txt` then close it
+Download the file from under the releases tab
 
-Click terminator.exe and it should work
+Unzip the file and place your tokens in tokens.txt
+
+
 
 ## <a id="license"></a>💎〢License
 MIT License
