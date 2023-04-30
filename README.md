@@ -1,5 +1,5 @@
 <h1 align="center">
-  Terminator V2⚠️ (PRE-RELEASE)
+  Terminator V2🩸
 </h1>
 
 
