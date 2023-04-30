@@ -1,5 +1,5 @@
 <h1 align="center">
-  Terminator V2⚠️
+  Terminator V2⚠️ (PRE-RELEASE)
 </h1>
 
 
@@ -20,7 +20,7 @@
 * [📁・Setup](#setup)
 - [💎・License](#setup)
 * [📝・Developers](#devs)
-- [🤓・Dear skids](#skids)
+
 
 ## <a id="info"></a>🌟〢Information
 Terminator V2 is not complete so check back for updates!
@@ -33,7 +33,7 @@ open cmd and type`pip install requirements.txt` then close it
 Click terminator.exe and it should work
 
 ## <a id="license"></a>💎〢License
-GNU General Public License v3.0
+MIT License
 
 ## <a id="devs"></a>📝〢Developers
 Clicks // TopStop5
