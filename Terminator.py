@@ -48,6 +48,10 @@ lb = Fore.LIGHTBLUE_EX
 m = Fore.MAGENTA
 bb = Fore.BLUE
 
+with open('agree.json', 'r') as f:
+    agreeds1 = json.load(f)
+    
+agreed = agreeds1.get('agreed')
 
 
 lock = threading.Lock()
@@ -70,7 +74,34 @@ def Spinner():
 		time.sleep(0.1)
 
 while True:
-    os.system('cls' if os.name == 'nt' else 'clear')           
+    os.system('cls' if os.name == 'nt' else 'clear')        
+    if agreed == 'No':
+        agreementtxt = """
+ █████╗  ██████╗ ██████╗ ███████╗███████╗███╗   ███╗███████╗███╗   ██╗████████╗
+██╔══██╗██╔════╝ ██╔══██╗██╔════╝██╔════╝████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+███████║██║  ███╗██████╔╝█████╗  █████╗  ██╔████╔██║█████╗  ██╔██╗ ██║   ██║   
+██╔══██║██║   ██║██╔══██╗██╔══╝  ██╔══╝  ██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   
+██║  ██║╚██████╔╝██║  ██║███████╗███████╗██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝                                                       
+        """
+        agreementtxt_faded = fade.fire(agreementtxt)
+        print(agreementtxt_faded)
+        chooseagree = input(f'{bb}[{w}>{bb}]{w} Have you read the license and agreement? Y/N: ').lower()
+        agreed2 = "agreed"
+
+        if chooseagree == "y":
+            with open('agree.json', 'r') as f:
+                yes = json.load(f)
+
+            yes[str(agreed2)] = 'Yes'
+
+
+            with open('agree.json', 'w') as f:
+                json.dump(yes, f, indent=4)
+        else:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            sys.exit(0)
+        
     print('')
     print('')
     text = """

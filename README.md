@@ -32,7 +32,9 @@ Download the file from under the releases tab
 
 Unzip the file and place your tokens in tokens.txt
 
-Run Terminator.exe
+Read the agreement and the license
+
+Run terminator.exe and type `Y` and u should be good to go.
 
 ## <a id="license"></a>💎〢License
 MIT License
