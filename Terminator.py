@@ -1,4 +1,4 @@
-import time, threading, requests, fade, sys, asyncio, os, random, threading, json, websocket
+import time, threading, requests, fade, sys, asyncio, os, random, threading, json, websocket, subprocess
 from colorama import Back, Fore, Style
 from websocket import WebSocket
 try:
@@ -101,6 +101,8 @@ while True:
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
             sys.exit(0)
+    
+    
         
     print('')
     print('')
@@ -125,19 +127,63 @@ while True:
     faded_credits = fade.water(credits)
     print(faded_credits)
     print(f'''
-    {bb}[{w}1{bb}] {w}Server Joiner   {b}|{Fore.RESET}{bb}[{w}9{Fore.RESET}{bb}]{w}   Channel Spammer  
-    {bb}[{w}2{bb}] {w}Server Leaver   {b}|{Fore.RESET}{bb}[{w}10{Fore.RESET}{bb}]{w}  Dm Spammer 
-    {bb}[{w}3{bb}] {w}Webhook Spammer {b}|{Fore.RESET}{bb}[{w}11{Fore.RESET}{bb}]{w}  Friend Spammer  
-    {bb}[{w}4{bb}] {w}Token Grabber   {b}|{Fore.RESET}{bb}[{w}12{Fore.RESET}{bb}]{w}  Reaction Spammer  
-    {bb}[{w}5{bb}] {w}Token Checker   {b}|{Fore.RESET}{bb}[{w}13{Fore.RESET}{bb}]{w}  Nickname Changer  
-    {bb}[{w}6{bb}] {w}Token Onliner   {b}|{Fore.RESET}{bb}[{w}14{Fore.RESET}{bb}]{w}  Webhook Spammer  
-    {bb}[{w}7{bb}] {w}Server Nuker    {b}|{Fore.RESET}{bb}[{w}15{Fore.RESET}{bb}]{w}  Status Changer
-    {bb}[{w}8{bb}] {w}Account Nuker   {b}|{Fore.RESET}{bb}[{w}16{Fore.RESET}{bb}]{w}{lr}  EXIT{Fore.RESET}
+    {bb}[{w}1{bb}] {w}{Fore.LIGHTMAGENTA_EX}UPDATER           {b}|{Fore.RESET}{bb}[{w}9{Fore.RESET}{bb}]{w}  Account Nuker      {b}|{Fore.RESET}{bb}[{w}17{Fore.RESET}{bb}]{w}{lr}  EXIT{Fore.RESET}
+    {bb}[{w}2{bb}] {w}Server Joiner     {b}|{Fore.RESET}{bb}[{w}10{Fore.RESET}{bb}]{w}  Channel Spammer  
+    {bb}[{w}3{bb}] {w}Server Leaver     {b}|{Fore.RESET}{bb}[{w}11{Fore.RESET}{bb}]{w}  Dm Spammer 
+    {bb}[{w}4{bb}] {w}Webhook Spammer   {b}|{Fore.RESET}{bb}[{w}12{Fore.RESET}{bb}]{w}  Friend Spammer 
+    {bb}[{w}5{bb}] {w}Token Grabber     {b}|{Fore.RESET}{bb}[{w}13{Fore.RESET}{bb}]{w}  Reaction Spammer  
+    {bb}[{w}6{bb}] {w}Token Checker     {b}|{Fore.RESET}{bb}[{w}14{Fore.RESET}{bb}]{w}  Nickname Changer  
+    {bb}[{w}7{bb}] {w}Token Onliner     {b}|{Fore.RESET}{bb}[{w}15{Fore.RESET}{bb}]{w}  Webhook Spammer  
+    {bb}[{w}8{bb}] {w}Server Nuker      {b}|{Fore.RESET}{bb}[{w}16{Fore.RESET}{bb}]{w}  Status Changer
     ''')
 
     choice = input(f'{bb}[{w}>{bb}]{w} What would you like to do?: ')
 
     if choice == '1':
+        titleUpdater = """
+██╗   ██╗██████╗ ██████╗  █████╗ ████████╗███████╗██████╗ 
+██║   ██║██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
+██║   ██║██████╔╝██║  ██║███████║   ██║   █████╗  ██████╔╝
+██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝  ██╔══██╗
+╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗██║  ██║
+ ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
+        """
+        faded_updater = fade.purpleblue(titleUpdater)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        Spinner()
+        print(faded_updater)
+
+        VERSION_URL = "https://raw.githubusercontent.com/TopStop5/Terminator/main/version.txt"
+        EXECUTABLE_URL = "https://github.com/TopStop5/Terminator/raw/main/Terminator.exe"
+        with open("version.txt", "r") as f:
+            current_version = f.read().strip()
+
+        # Get the latest version from the remote file
+        response = requests.get(VERSION_URL)
+        latest_version = response.text.strip()
+
+        # Compare the versions and download the new executable if necessary
+        if latest_version != current_version:
+            with open("version.txt", "w") as f:
+                f.write(latest_version)
+            # Download the new executable
+            response = requests.get(EXECUTABLE_URL)
+            with open("Terminator.exe", "wb") as f:
+                f.write(response.content)
+
+
+            print(f"\n{bb}[{w}>{bb}]{w} Update complete. Please restart the application.")
+            exit_choicee = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
+            os.system('cls' if os.name == 'nt' else 'clear')        
+            sys.exit(0)
+        else:
+            print(f"{lr}[{Fore.RED}>{lr}] No updates available.")
+            exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
+            continue
+            
+
+
+    if choice == '2':
         os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
         title1 = """       
@@ -148,7 +194,7 @@ while True:
 ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║    ╚█████╔╝╚██████╔╝██║██║ ╚████║███████╗██║  ██║
 ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝     ╚════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝                                                                                                
         """
-        faded_title1 = fade.purplepink(title1)
+        faded_title = fade.purplepink(title1)
         #print (faded_title1)
         cs = """        
   /$$$$$$                          /$$                            /$$$$$$                               
@@ -169,7 +215,7 @@ while True:
         continue
 
     # Server Leaver
-    if choice == '2':
+    if choice == '3':
         os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
         title2 = """
@@ -209,7 +255,7 @@ while True:
         continue
 
 #   WEBHOOK SPAMMER
-    if choice == '3':
+    if choice == '4':
         os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
         title3 = """           
@@ -248,7 +294,7 @@ while True:
         exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
         continue
     
-    if choice == '4':
+    if choice == '5':
         os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
         cs = """        
@@ -271,7 +317,7 @@ while True:
 
 
 # Token Checker
-    if choice == '5':
+    if choice == '6':
             os.system('cls' if os.name == 'nt' else 'clear')
             Spinner()
             title5 = """           
@@ -325,7 +371,7 @@ while True:
             continue
              
 # Token Onliner
-    if choice == '6':
+    if choice == '7':
         os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
         title6 = """
@@ -365,27 +411,6 @@ while True:
             time.sleep(1)
 
         input(f'{bb}[{w}>{bb}]{w} Press ENTER to continue: ')
-
-    if choice == '7':
-        os.system('cls' if os.name == 'nt' else 'clear')
-        Spinner()
-        cs = """        
-  /$$$$$$                          /$$                            /$$$$$$                               
- /$$__  $$                        |__/                           /$$__  $$                              
-| $$  \__/  /$$$$$$  /$$$$$$/$$$$  /$$ /$$$$$$$   /$$$$$$       | $$  \__/  /$$$$$$   /$$$$$$  /$$$$$$$ 
-| $$       /$$__  $$| $$_  $$_  $$| $$| $$__  $$ /$$__  $$      |  $$$$$$  /$$__  $$ /$$__  $$| $$__  $$
-| $$      | $$  \ $$| $$ \ $$ \ $$| $$| $$  \ $$| $$  \ $$       \____  $$| $$  \ $$| $$  \ $$| $$  \ $$
-| $$    $$| $$  | $$| $$ | $$ | $$| $$| $$  | $$| $$  | $$       /$$  \ $$| $$  | $$| $$  | $$| $$  | $$
-|  $$$$$$/|  $$$$$$/| $$ | $$ | $$| $$| $$  | $$|  $$$$$$$      |  $$$$$$/|  $$$$$$/|  $$$$$$/| $$  | $$
- \______/  \______/ |__/ |__/ |__/|__/|__/  |__/ \____  $$       \______/  \______/  \______/ |__/  |__/
-                                                 /$$  \ $$                                              
-                                                |  $$$$$$/                                              
-                                                 \______/                                               
-        """
-        faded_cs = fade.purpleblue(cs)
-        print(faded_cs)
-        exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
-        continue
 
     if choice == '8':
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -427,8 +452,7 @@ while True:
         faded_cs = fade.purpleblue(cs)
         print(faded_cs)
         exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
-        continue    
-
+        continue
 
     if choice == '10':
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -449,7 +473,8 @@ while True:
         faded_cs = fade.purpleblue(cs)
         print(faded_cs)
         exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
-        continue     
+        continue    
+
 
     if choice == '11':
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -470,7 +495,7 @@ while True:
         faded_cs = fade.purpleblue(cs)
         print(faded_cs)
         exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
-        continue
+        continue     
 
     if choice == '12':
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -556,11 +581,43 @@ while True:
         exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
         continue
 
+    if choice == '16':
+        os.system('cls' if os.name == 'nt' else 'clear')
+        Spinner()
+        cs = """        
+  /$$$$$$                          /$$                            /$$$$$$                               
+ /$$__  $$                        |__/                           /$$__  $$                              
+| $$  \__/  /$$$$$$  /$$$$$$/$$$$  /$$ /$$$$$$$   /$$$$$$       | $$  \__/  /$$$$$$   /$$$$$$  /$$$$$$$ 
+| $$       /$$__  $$| $$_  $$_  $$| $$| $$__  $$ /$$__  $$      |  $$$$$$  /$$__  $$ /$$__  $$| $$__  $$
+| $$      | $$  \ $$| $$ \ $$ \ $$| $$| $$  \ $$| $$  \ $$       \____  $$| $$  \ $$| $$  \ $$| $$  \ $$
+| $$    $$| $$  | $$| $$ | $$ | $$| $$| $$  | $$| $$  | $$       /$$  \ $$| $$  | $$| $$  | $$| $$  | $$
+|  $$$$$$/|  $$$$$$/| $$ | $$ | $$| $$| $$  | $$|  $$$$$$$      |  $$$$$$/|  $$$$$$/|  $$$$$$/| $$  | $$
+ \______/  \______/ |__/ |__/ |__/|__/|__/  |__/ \____  $$       \______/  \______/  \______/ |__/  |__/
+                                                 /$$  \ $$                                              
+                                                |  $$$$$$/                                              
+                                                 \______/                                               
+        """
+        faded_cs = fade.purpleblue(cs)
+        print(faded_cs)
+        exitleave = input(f'{bb}[{w}>{bb}]{w} Press ENTER: ')
+        continue
+
 
 
     #   EXIT
-    if choice == '16':
+    if choice == '17':
+        os.system('cls' if os.name == 'nt' else 'clear')
         Spinner()
+        exittxt = """
+███████╗██╗  ██╗██╗████████╗
+██╔════╝╚██╗██╔╝██║╚══██╔══╝
+█████╗   ╚███╔╝ ██║   ██║   
+██╔══╝   ██╔██╗ ██║   ██║   
+███████╗██╔╝ ██╗██║   ██║   
+╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   
+        """
+        faded_exit = fade.fire(exittxt)
+        print(faded_exit)
         exit_choice = input(f"\n{bb}[{w}>{bb}]{w} Are You Sure You Want To Exit Terminator V2? Y/N: ").lower()
         if exit_choice == "y":
             os.system('cls' if os.name == 'nt' else 'clear')        
